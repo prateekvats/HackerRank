@@ -2,13 +2,19 @@ import java.util.Stack;
 
 public class BalancedParenthensies {
 
-    public static void main(String args[]) {
+    int i=1;
+    BalancedParenthensies(BalancedParenthensies p){
+        i=p.i+1;
+    }
+
+
+
+    static public void main(String args[]) {
 
         System.out.println(balancedParenthensies("{}[]()"));//This returns true
         System.out.println(balancedParenthensies("{[]]}"));//This returns false
 
     }
-
     public static boolean balancedParenthensies(String s) {
         Stack<Character> stack  = new Stack<Character>();
         for(int i = 0; i < s.length(); i++) {
